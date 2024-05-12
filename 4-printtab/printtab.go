@@ -1,9 +1,7 @@
 package printtab
 
 import (
-	"bufio"
 	"fmt"
-	"os"
 	"strconv"
 )
 
@@ -43,7 +41,6 @@ func PrintTable(n int) string {
 		}
 		result += "\n"
 	}
-	out := bufio.NewWriter(os.Stdout)
-	fmt.Fprint(out, result)
+	fmt.Print(result)
 	return result
 }
